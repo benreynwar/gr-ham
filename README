@@ -1,0 +1,5 @@
+GNU Radio signal processing blocks and examples potentially useful to ham radio.
+
+Currently only contains a psk31 decoding block and a psk31 example receiving from a WAV file.
+
+Released under GPL verions 3.
