@@ -1,6 +1,61 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Thu Feb 16 21:38:07 2012</timestamp>
+  <timestamp>Wed Feb 22 16:42:37 2012</timestamp>
+  <block>
+    <key>options</key>
+    <param>
+      <key>id</key>
+      <value>psk31_wav</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value></value>
+    </param>
+    <param>
+      <key>author</key>
+      <value></value>
+    </param>
+    <param>
+      <key>description</key>
+      <value></value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>1280, 1024</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>wx_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
+    </param>
+    <param>
+      <key>run_options</key>
+      <value>prompt</value>
+    </param>
+    <param>
+      <key>run</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(351, 6)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <block>
     <key>gr_null_source</key>
     <param>
@@ -91,37 +146,6 @@
     <param>
       <key>_coordinate</key>
       <value>(126, 244)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_wavfile_source</key>
-    <param>
-      <key>id</key>
-      <value>gr_wavfile_source_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>your_wavefile_here.WAV</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(47, 94)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -385,10 +409,10 @@
     </param>
   </block>
   <block>
-    <key>psk31_decode_bb</key>
+    <key>ham_psk31_decode_bb</key>
     <param>
       <key>id</key>
-      <value>psk31_decode_bb_0</value>
+      <value>ham_psk31_decode_bb_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -470,54 +494,30 @@
     </param>
   </block>
   <block>
-    <key>options</key>
+    <key>gr_wavfile_source</key>
     <param>
       <key>id</key>
-      <value>psk31_wav</value>
+      <value>gr_wavfile_source_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>title</key>
-      <value></value>
+      <key>file</key>
+      <value>/home/ben/grcode/gr-ham/apps/example.WAV</value>
     </param>
     <param>
-      <key>author</key>
-      <value></value>
+      <key>repeat</key>
+      <value>False</value>
     </param>
     <param>
-      <key>description</key>
-      <value></value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1280, 1024</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>wx_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
+      <key>nchan</key>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(351, 6)</value>
+      <value>(47, 94)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -586,12 +586,12 @@
   </connection>
   <connection>
     <source_block_id>gr_diff_decoder_bb_0</source_block_id>
-    <sink_block_id>psk31_decode_bb_0</sink_block_id>
+    <sink_block_id>ham_psk31_decode_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>psk31_decode_bb_0</source_block_id>
+    <source_block_id>ham_psk31_decode_bb_0</source_block_id>
     <sink_block_id>gr_message_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>

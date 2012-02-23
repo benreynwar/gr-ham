@@ -4,17 +4,18 @@
   <key>ham_psk31_decode_bb</key>
   <category>ham</category>
   <import>import ham</import>
-  <make>ham.psk31_decode_bb()</make>
+  <make>ham.psk31_decode_bb($bit_flip)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
-  <param>
-    <name>...</name>
-    <key>...</key>
-    <type>...</type>
-  </param>
+	<param>
+		<name>Flip the Bits</name>
+		<key>bit_flip</key>
+		<value>False</value>
+		<type>bool</type>
+	</param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)
@@ -23,7 +24,7 @@
        * optional (set to 1 for optional inputs) -->
   <sink>
     <name>in</name>
-    <type><!-- e.g. int, real, complex, byte, short, xxx_vector, ...--></type>
+    <type>byte</type>
   </sink>
 
   <!-- Make one 'source' node per output. Sub-nodes:
@@ -33,6 +34,6 @@
        * optional (set to 1 for optional inputs) -->
   <source>
     <name>out</name>
-    <type><!-- e.g. int, real, complex, byte, short, xxx_vector, ...--></type>
+    <type>byte</type>
   </source>
 </block>
