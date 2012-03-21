@@ -6,7 +6,7 @@ import logging
 
 from gnuradio import gr, window
 
-from multi.signal_psk31 import PSK31Signal
+from ham.signal_psk31 import PSK31Signal
 
 logger = logging.getLogger(__name__)
 

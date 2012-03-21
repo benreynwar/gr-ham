@@ -41,14 +41,6 @@ class psk31_receiver(gr.hier_block2):
         self.connect(self, self.costas, self.clock_recovery,
                      self.receiver, self.diff, self.decoder, self.snk)
 
-        # debugging stuff
-        self.file_sink = gr.file_sink(gr.sizeof_gr_complex, 'costas.out')
-        self.file_sink2 = gr.file_sink(gr.sizeof_gr_complex, 'clock.out')
-        self.file_sink3 = gr.file_sink(1, 'receiver.out')
-        self.connect(self.costas, self.file_sink)
-        self.connect(self.clock_recovery, self.file_sink2)
-        self.connect(self.receiver, self.file_sink3)
-        
     def set_sample_rate(self, samp_rate):
         self.clock_recovery.set_omega(1.0*samp_rate/self.symbol_rate)
     

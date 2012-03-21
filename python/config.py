@@ -6,7 +6,7 @@ def setup_logging(level):
     ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
     ch.setFormatter(formatter)
-    packages = ("multi", "__main__")
+    packages = ("ham", "__main__")
     for package in packages:
         logger = logging.getLogger(package)
         logger.addHandler(ch)
