@@ -31,6 +31,12 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
+	channelizer.py
+	config.py
+	detector.py
+	gui.py
+	signal_psk31.py
+	system.py
     DESTINATION ${GR_PYTHON_DIR}/ham
 )
 
@@ -42,3 +48,4 @@ include(GrTest)
 set(GR_TEST_TARGET_DEPS gnuradio-ham)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 GR_ADD_TEST(qa_psk31_decode_bb ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ham_psk31_decode_bb.py)
+GR_ADD_TEST(qa_decimating_mean_vcc ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_ham_decimating_mean_vcc.py)
